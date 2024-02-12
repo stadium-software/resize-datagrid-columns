@@ -2,7 +2,7 @@
 
 Sometimes DataGrid columns contain more information than we can/want to show. In this case we can use the Ellipsis display option for that column. However, this means that some of the column content will not be visible to users. One option to mitigate this problem is to allow users to expand the column. 
 
-https://github.com/stadium-software/resize-datagrid-columns/assets/2085324/4e7272f2-7b22-41e1-a501-b8e1c8ca1731
+
 
 ## Version 
 1.0 - initial
@@ -118,7 +118,7 @@ createResizableTable();
 
 5. Drag the Global Script called "ResizeColumn" into the Page.Load event handler
 6. Provide values for the script input parameters
-   1. Columns: Sel;ect the *List* called "ResizableColumnsList" from the dropdown
+   1. Columns: Select the *List* called "ResizableColumnsList" from the dropdown
    2. DataGridClass: Enter the unique classname you added to this DataGrid (e.g. resize-column)
 
 ![](images/ScriptProperties.png)
