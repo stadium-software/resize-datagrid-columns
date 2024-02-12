@@ -1,0 +1,39 @@
+.stadium-resizable-columns {
+    border-collapse: collapse;
+
+    &>thead>tr>th,
+    &>tbody>tr>td {
+        border: var(--resizable-column-cell-border-width) solid var(--resizable-column-cell-border-color);
+    }
+    & th a {
+        white-space: nowrap;
+    }
+
+    .resizer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(var(--resizable-column-icon-size) + 2px);;
+        user-select: none;
+        height: 100%;
+        border-right: var(--resizable-column-hover-border-size) solid transparent;
+
+        &:after {
+            background-image: var(--resizable-column-icon);
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-size: var(--resizable-column-icon-size);
+            height: 100%;
+            width: calc(var(--resizable-column-icon-size) + 2px);
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    .resizer:hover,
+    .resizing {
+        border-right: var(--resizable-column-hover-border-size) solid var(--resizable-column-hover-border-color);
+    }
+}
