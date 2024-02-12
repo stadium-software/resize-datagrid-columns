@@ -97,8 +97,12 @@ createResizableTable();
 ```
 
 ## Connector
-1. Add a connector and DataSource to your application as per usual
-2. Make sure at least one of the columns contains a lot of text
+1. Create a database called "StadiumColResize" in your SQL Server
+2. Use the SQL script in the data folder of this repo to create the database tables and populate the data for the demo sample application
+3. Add a connector for the Database to your application as per usual
+4. Generate a query to select all data from the "Funds" table of the database
+
+![](images/GenerateQuery.png)
 
 ## Page Setup
 1. Drag a *DataGrid* control to a page 
