@@ -2,7 +2,7 @@
 
 Sometimes DataGrid columns contain more information than we can/want to show. In this case we can use the Ellipsis display option for that column. However, this means that some of the column content will not be visible to users. One option to mitigate this problem is to allow users to expand the column. 
 
-
+https://github.com/stadium-software/resize-datagrid-columns/assets/2085324/ba261995-724b-4320-9b8c-09efdb88c0fa
 
 ## Version 
 1.0 - initial
