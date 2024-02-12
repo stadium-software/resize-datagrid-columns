@@ -1,0 +1,1 @@
+# resize-datagrid-columns
