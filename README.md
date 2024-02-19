@@ -20,7 +20,7 @@ https://github.com/stadium-software/resize-datagrid-columns/assets/2085324/ba261
 3. Drag a *JavaScript* action into the script
 4. Add the Javascript below into the JavaScript code property
 ```javascript
-/*Stadium Script v1.0*/
+/* Stadium Script v1.0 https://github.com/stadium-software/resize-datagrid-columns */
 let dgClassName = ~.Parameters.Input.DataGridClass;
 let table = document.querySelector("." + dgClassName + " table");
 if (!table) { 
