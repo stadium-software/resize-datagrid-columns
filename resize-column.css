@@ -2,11 +2,11 @@
 .stadium-resizable-columns {
     border-collapse: collapse;
 
-    &>thead>tr>th,
-    &>tbody>tr>td {
-        border: var(--resizable-column-cell-border-width) solid var(--resizable-column-cell-border-color);
+    > thead > tr > th,
+    > tbody > tr > td {
+        border: var(--resizable-column-cell-border-width, 1px) solid var(--resizable-column-cell-border-color, var(--X-DARK-GREY));
     }
-    & th a {
+    th a {
         white-space: nowrap;
     }
 
@@ -14,18 +14,18 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: calc(var(--resizable-column-icon-size) + 2px);;
+        width: calc(var(--resizable-column-icon-size, 18px) + 2px);;
         user-select: none;
         height: 100%;
-        border-right: var(--resizable-column-hover-border-size) solid transparent;
+        border-right: var(--resizable-column-hover-border-size, 2px) solid transparent;
 
         &:after {
-            background-image: var(--resizable-column-icon);
+            background-image: var(--resizable-column-icon, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23bbb' d='m19.164 12l-6.207-6.207l-1.414 1.414L16.336 12l-4.793 4.793l1.414 1.414zm-5.65 0L7.307 5.793L5.893 7.207L10.686 12l-4.793 4.793l1.414 1.414z'/%3E%3C/svg%3E"));
             background-repeat: no-repeat;
             background-position: right center;
-            background-size: var(--resizable-column-icon-size);
+            background-size: var(--resizable-column-icon-size, 18px);
             height: 100%;
-            width: calc(var(--resizable-column-icon-size) + 2px);
+            width: calc(var(--resizable-column-icon-size, 18px) + 2px);
             content: '';
             display: block;
             position: absolute;
@@ -35,6 +35,7 @@
 
     .resizer:hover,
     .resizing {
-        border-right: var(--resizable-column-hover-border-size) solid var(--resizable-column-hover-border-color);
+        border-right: var(--resizable-column-hover-border-size, 2px) solid var(--resizable-column-hover-border-color, var(--X-DARK-GREY));
+        cursor: ew-resize;
     }
 }

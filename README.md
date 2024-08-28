@@ -131,15 +131,14 @@ createResizableTable();
    1. Drag your query into the Page.Load event handler to execute it
    2. Assign the data to the *DataGrid* using a *SetValue* function
 
-# Styling
-
 ## Customising the display
 The *resize-column-variables.css* file included in this repo contains a set of variables that can be changed to customise the look and feel
 1. Open the CSS file called [*resize-column-variables.css*](resize-column-variables.css) from this repo in an editor of your choice (I recommend [VS Code](https://code.visualstudio.com/))
 2. Adjust the variables in the *:root* element as you see fit
 
 ## Applying the CSS
-How to apply the CSS to your application
+The CSS below is required for the correct functioning of the module. Some elements can be customised using a variables CSS file. How to apply the CSS to your application
+
 1. Create a folder called *CSS* inside of your Embedded Files in your application
 2. Drag the two CSS files from this repo [*resize-column-variables.css*](resize-column-variables.css) and [*resize-column.css*](resize-column.css) into that folder
 3. Paste the link tags below into the *head* property of your application
