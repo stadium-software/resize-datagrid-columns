@@ -1,11 +1,10 @@
-/* CSS v1.0 https://github.com/stadium-software/resize-datagrid-columns */
 :root {
-    --resizable-column-cell-border-width: 1px;
+    --resizable-column-cell-border-width: 0.1rem;
     --resizable-column-cell-border-color: #ccc;
     
-    --resizable-column-hover-border-size: 2px;
+    --resizable-column-hover-border-size: 0.2rem;
     --resizable-column-hover-border-color: #bbb;
 
     --resizable-column-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24'%3E%3Cpath fill='%23bbb' d='m19.164 12l-6.207-6.207l-1.414 1.414L16.336 12l-4.793 4.793l1.414 1.414zm-5.65 0L7.307 5.793L5.893 7.207L10.686 12l-4.793 4.793l1.414 1.414z'/%3E%3C/svg%3E");
-    --resizable-column-icon-size: 18px;
+    --resizable-column-icon-size: 1.8rem;
 }

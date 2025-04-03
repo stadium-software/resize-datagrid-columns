@@ -5,7 +5,9 @@ Sometimes DataGrid columns contain more information than we can/want to show. In
 https://github.com/stadium-software/resize-datagrid-columns/assets/2085324/ba261995-724b-4320-9b8c-09efdb88c0fa
 
 ## Version 
-1.0 - initial
+1.0
+
+1.1 Converted readme to 6.12+; Changed px to rem; fixed non material design theme
 
 # Setup
 
@@ -18,9 +20,9 @@ https://github.com/stadium-software/resize-datagrid-columns/assets/2085324/ba261
    1. Columns
    2. DataGridClass
 3. Drag a *JavaScript* action into the script
-4. Add the Javascript below into the JavaScript code property
+4. Add the Javascript below unchanged into the JavaScript code property
 ```javascript
-/* Stadium Script v1.0 https://github.com/stadium-software/resize-datagrid-columns */
+/*Stadium Script v1.1 https://github.com/stadium-software/resize-datagrid-columns */
 let dgClassName = ~.Parameters.Input.DataGridClass;
 let table = document.querySelector("." + dgClassName + " table");
 if (!table) { 
@@ -131,21 +133,40 @@ createResizableTable();
    1. Drag your query into the Page.Load event handler to execute it
    2. Assign the data to the *DataGrid* using a *SetValue* function
 
-## Customising the display
-The *resize-column-variables.css* file included in this repo contains a set of variables that can be changed to customise the look and feel
-1. Open the CSS file called [*resize-column-variables.css*](resize-column-variables.css) from this repo in an editor of your choice (I recommend [VS Code](https://code.visualstudio.com/))
-2. Adjust the variables in the *:root* element as you see fit
+## CSS
+The CSS below is required for the correct functioning of the module. Variables exposed in the [*css-file-variables.css*](css-file-variables.css) file can be [customised](#customising-css).
 
-## Applying the CSS
-The CSS below is required for the correct functioning of the module. Some elements can be customised using a variables CSS file. How to apply the CSS to your application
-
-1. Create a folder called *CSS* inside of your Embedded Files in your application
-2. Drag the two CSS files from this repo [*resize-column-variables.css*](resize-column-variables.css) and [*resize-column.css*](resize-column.css) into that folder
+### Before v6.12
+1. Create a folder called "CSS" inside of your Embedded Files in your application
+2. Drag the two CSS files from this repo [*css-file-variables.css*](css-file-variables.css) and [*css-file.css*](css-file.css) into that folder
 3. Paste the link tags below into the *head* property of your application
 ```html
-<link rel="stylesheet" href="{EmbeddedFiles}/CSS/resize-column.css">
-<link rel="stylesheet" href="{EmbeddedFiles}/CSS/resize-column-variables.css">
+<link rel="stylesheet" href="{EmbeddedFiles}/CSS/css-file.css">
+<link rel="stylesheet" href="{EmbeddedFiles}/CSS/css-file-variables.css">
 ``` 
 
-## CSS Upgrading
-To upgrade the CSS in this module, follow the [steps outlined in this repo](https://github.com/stadium-software/samples-upgrading)
+### v6.12+
+1. Create a folder called "CSS" inside of your Embedded Files in your application
+2. Drag the CSS files from this repo [*css-file.css*](css-file.css) into that folder
+3. Paste the link tag below into the *head* property of your application
+```html
+<link rel="stylesheet" href="{EmbeddedFiles}/CSS/css-file.css">
+``` 
+
+### Customising CSS
+1. Open the CSS file called [*css-file-variables.css*](css-file-variables.css) from this repo
+2. Adjust the variables in the *:root* element as you see fit
+3. Stadium 6.12+ users can comment out any variable they do **not** want to customise
+4. Add the [*css-file-variables.css*](css-file-variables.css) to the "CSS" folder in the EmbeddedFiles (overwrite)
+5. Paste the link tag below into the *head* property of your application (if you don't already have it there)
+```html
+<link rel="stylesheet" href="{EmbeddedFiles}/CSS/css-file-variables.css">
+``` 
+6. Add the file to the "CSS" inside of your Embedded Files in your application
+
+**NOTE: Do not change any of the CSS in the 'css-file.css' file**
+
+## Upgrading Stadium Repos
+Stadium Repos are not static. They change as additional features are added and bugs are fixed. Using the right method to work with Stadium Repos allows for upgrading them in a controlled manner. 
+
+How to use and update application repos is described here: [Working with Stadium Repos](https://github.com/stadium-software/samples-upgrading)
