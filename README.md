@@ -98,14 +98,6 @@ function formatHeadings(arr) {
 createResizableTable();
 ```
 
-## Connector
-1. Create a database called "StadiumFilterData" in your SQL Server
-2. Run the SQL script in the data folder of this repo against that database to create a database table called "Funds" and to populate the data for the demo sample application
-3. Add a connector for the Database to your application as per usual
-4. Generate a query to select all data from the "Funds" table of the database
-
-![](images/GenerateQuery.png)
-
 ## Page Setup
 1. Drag a *DataGrid* control to a page 
 2. Add a class to the *DataGrid* classes property to uniquely identify the control (e.g. resize-column)
